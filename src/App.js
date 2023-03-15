@@ -141,6 +141,7 @@ function App() {
             <li>Background blur not working after image uploaded and removed.</li>
             <li>Warning: do not use on mobile devices (heavy issues).</li>
             <li>Works best on Chrome.</li>
+            <li>Update test</li>
           </ul>
         </p>
       </div>

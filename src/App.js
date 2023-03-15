@@ -3,7 +3,9 @@ import { useState, useEffect, useRef } from 'react';
 import Webcam from 'react-webcam';
 import * as cameraUtils from '@mediapipe/camera_utils';
 import * as selfieSeg from '@mediapipe/selfie_segmentation';
+import html2canvas from 'html2canvas';
 import './App.css';
+import canvasToImage from 'canvas-to-image';
 
 function App() {
   const webcamRef = useRef(null);
@@ -78,6 +80,13 @@ function App() {
     }
   }
 
+  // Function to take screenshot
+  const screenshotHandler = (e) => {
+    html2canvas(document.querySelector("#arOutput")).then(canvas => {
+      canvasToImage(canvas)
+    });
+  }
+
   useEffect(() => {
     const selfieSegmentation = new selfieSeg.SelfieSegmentation({
       locateFile: (file) => {
@@ -108,7 +117,7 @@ function App() {
       <img id='imageBG' src={backgroundImageURL} />
 
       <div className='videoContainer'>
-        <div className='video'>
+        <div id='arOutput' className='video'>
           <Webcam
             ref={webcamRef}
             style={{
@@ -132,17 +141,20 @@ function App() {
         <input type='file' accept='image/*' multiple onChange={backgroundImageHandler} />
         <button onClick={backgroundImageDisable}>Remove Background</button>
         <button onClick={camBackgroundBlurToggle}>Blur Background</button>
+        <button onClick={screenshotHandler}>Take Screenshot</button>
       </div>
 
       <div className='devNotes'>
-        <p><ul>Known Issues:</ul></p>
-        <p>
-          <ul>
-            <li>Background blur not working after image uploaded and removed.</li>
-            <li>Warning: do not use on mobile devices (heavy issues).</li>
-            <li>Works best on Chrome.</li>
-          </ul>
-        </p>
+        <p>Known Issues:</p>
+        <ul>
+          <li>Background blur not working after image uploaded and removed.</li>
+          <li>Warning: do not use on mobile devices (heavy issues).</li>
+          <li>Works best on Chrome.</li>
+        </ul>
+        <p>Changelog:</p>
+        <ul>
+          <li>15/3/2023 = Added screenshot function. (NEW!)</li>
+        </ul>
       </div>
     </div>
   )

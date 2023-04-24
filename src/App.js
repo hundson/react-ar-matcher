@@ -148,12 +148,8 @@ function App() {
         <p>Known Issues:</p>
         <ul>
           <li>Background blur not working after image uploaded and removed.</li>
-          <li>Warning: do not use on mobile devices (heavy issues).</li>
-          <li>Works best on Chrome.</li>
-        </ul>
-        <p>Changelog:</p>
-        <ul>
-          <li>15/3/2023 = Added screenshot function. (NEW!)</li>
+          <li>Incompatible with mobile devices.</li>
+          <li>Works best on Google Chrome browser.</li>
         </ul>
       </div>
     </div>

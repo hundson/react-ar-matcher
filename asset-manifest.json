@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-ar-matcher/static/css/main.93ce526c.css",
-    "main.js": "/react-ar-matcher/static/js/main.e94bd62b.js",
+    "main.js": "/react-ar-matcher/static/js/main.3492642a.js",
     "static/js/787.6d159a46.chunk.js": "/react-ar-matcher/static/js/787.6d159a46.chunk.js",
     "index.html": "/react-ar-matcher/index.html",
     "main.93ce526c.css.map": "/react-ar-matcher/static/css/main.93ce526c.css.map",
-    "main.e94bd62b.js.map": "/react-ar-matcher/static/js/main.e94bd62b.js.map",
+    "main.3492642a.js.map": "/react-ar-matcher/static/js/main.3492642a.js.map",
     "787.6d159a46.chunk.js.map": "/react-ar-matcher/static/js/787.6d159a46.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93ce526c.css",
-    "static/js/main.e94bd62b.js"
+    "static/js/main.3492642a.js"
   ]
 }
